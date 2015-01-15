@@ -1,0 +1,76 @@
+body{
+	background-image: url('http://www.myfreetextures.com/wp-content/uploads/2011/06/another-rough-old-and-worn-parchment-paper.jpg');
+	background-repeat: no-repeat;
+	font: sans-serif;
+	}
+.jumbotron{
+	background-image: url("http://images3.alphacoders.com/435/43567.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	color: #ffffff;
+	}	
+.jumbotron .container{
+	background: #000000;
+	opacity: .8; 
+	}
+.jumbotron .jumboTextbox{
+	opacity: none;
+	}
+.nav li{
+	display: inline;
+	padding: 5px;
+}
+.foot p{
+	font-size: small;
+	float: bottom;
+	}
+.top div{
+	display: inline;
+	}
+.bottom div{
+	display: inline;
+	}
+.MapScreen{
+	height: 500px; /*Not sure why sizes for .MapScreen, .MapSelect, .chat, .RollDice are not working*/
+	background-color: #000000;
+	}
+.MapSelect{
+	height: 500px;
+	background-color: #ffffff;
+	}
+.chat{
+	height: 300px;
+	background-color: #ff99ff;
+	}
+.RollDice{
+	height: 300px;
+	background-color: #ffff99;
+	}
+.PlayerHead{
+	height: 250px;
+	background-image: url("http://hellogiggles.hellogiggles.netdna-cdn.com/wp-content/uploads/2013/06/27/freaks-and-geeks-dd-700x466.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0px -280px;
+	color: #ffffff;
+	}
+.DMHead{
+	height: 250px;
+	background-image: url("http://dungeonsmaster.com/wp-content/uploads/2013/06/4e-dm-screen-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #ffffff;
+	}
+
+.pull-right{
+	float: right;
+	}
+	
+.pull_left{
+	float: left;
+	}
+	
+.logbox{
+	border-radius: 5px;
+	}
