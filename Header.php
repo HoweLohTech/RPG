@@ -17,6 +17,7 @@
 				Password: <input class="logbox" type="text" name="password">
 				<input type="submit">
 			</form>
+			<a class="NewU" href="newUserPage.php">New to HoweLoh?</a>
 			<ul class="nav nav-pills" class="pull-right">
 				<li>
 					<a href="about.php">About us</a>

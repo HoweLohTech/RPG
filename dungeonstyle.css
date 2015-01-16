@@ -74,3 +74,9 @@ body{
 .logbox{
 	border-radius: 5px;
 	}
+
+.NewU{
+    padding: 5px;
+    text-decoration: underline, none;
+    color: red;
+}

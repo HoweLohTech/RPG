@@ -1,8 +1,8 @@
 <?php
-$dbHost = 'localhost';
-$dbUser = '';
-$dbPass = '';
-$dbDB = 'rpg';
+$dbHost = 'mysql.sercureserver.net';
+$dbUser = 'ghandi';
+$dbPass = 'Su7aPh0ne';
+$dbDB = 'RPG';
 
 //mysql_connect takes db host, username, and password to connect to mysql on the server
 $db = mysql_connect($dbHost,$dbUser,$dbPass)or die("Error connecting to database.");
