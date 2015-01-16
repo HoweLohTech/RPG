@@ -1,5 +1,5 @@
 <?php
-$dbHost = 'mysql.sercureserver.net';
+$dbHost = 'localhost';
 $dbUser = 'ghandi';
 $dbPass = 'Su7aPh0ne';
 $dbDB = 'RPG';
