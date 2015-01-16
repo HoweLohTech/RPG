@@ -5,37 +5,26 @@ require "dbConnect.php";
 if ($_POST["NewUPass"] != $_POST["NewUPassConf"]){
     die('Passwords do not match');
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
 
-$NewUsername = mysql_real-escape_string(testFormData($_Post['NewUsername']));
+$NewUsername = mysql_real_escape_string(testFormData($_Post['NewUsername']));
 $NewUPass = hash('sha256', mysql_real_escape_string(testFormData($_POST["NewUPass"])));
-$NewUFirst = mysql_real-escape_string(testFormData($_Post['NewUFirst']));
-$NewULast = mysql_real-escape_string(testFormData($_Post['$NewULast']));
-$NewUBirth = mysql_real-escape_string(testFormData($_Post['NewUBirth']));
+$NewUFirst = mysql_real_escape_string(testFormData($_Post['NewUFirst']));
+$NewULast = mysql_real_escape_string(testFormData($_Post['$NewULast']));
+$NewUBirth = mysql_real_escape_string(testFormData($_Post['NewUBirth']));
 
-$sqlIns= 'INSERT INTO users ' .
+$sql= 'INSERT INTO users ' .
     "(id, username, password, firstName, lastName, bDate)" .
     "Values ('', '$NewUsername', '$NewUPass', '$NewUFirst', '$NewULast', '$NewUBirth')";
     
->>>>>>> Stashed changes
+$insert= mysql_query($sql);
 
-$NewUsername = mysql_real-escape_string(testFormData($_Post['NewUsername']));
-$NewUPass = hash('sha256', mysql_real_escape_string(testFormData($_POST["NewUPass"])));
-$NewUFirst = mysql_real-escape_string(testFormData($_Post['NewUFirst']));
-$NewULast = mysql_real-escape_string(testFormData($_Post['$NewULast']));
-$NewUBirth = mysql_real-escape_string(testFormData($_Post['NewUBirth']));
+if (!$insert){
+    die ("Erroneous:" . mysql_error());
+}
 
-$sqlIns= 'INSERT INTO users ' .
-    "(id, username, password, firstName, lastName, bDate)" .
-    "Values ('', '$NewUsername', '$NewUPass', '$NewUFirst', '$NewULast', '$NewUBirth')";
-    
->>>>>>> Stashed changes
+echo "Congratz, Bruh (or Sis)!!" . "<br>" .
+        "Welcome to the HoweLoh Fam!!" . "<br>" . 
+        "<a href='index.php'> Return to Main Page </a>";
 
-$NewUsername= mysql_real-escape_string(testFormData($_Post['NewUsername']));
-$NewUPass= hash('sha256', mysql_real_escape_string(testFormData($_POST["NewUPass"])));
-$
-
-$sqlIns= 'INSERT INTO users' . ('',');
+mysql_close($db);
+?>
