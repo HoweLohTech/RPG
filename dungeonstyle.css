@@ -1,8 +1,14 @@
 body{
-	background-image: url('http://www.myfreetextures.com/wp-content/uploads/2011/06/another-rough-old-and-worn-parchment-paper.jpg');
+	background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/02/parchment-paper-light-texture.jpg');
 	background-repeat: no-repeat;
 	font: sans-serif;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	}
+a{
+    color: #000000;
+    text-decoration: underline;
+}
 .jumbotron{
 	background-image: url("http://images3.alphacoders.com/435/43567.jpg");
 	background-repeat: no-repeat;
@@ -14,16 +20,12 @@ body{
 	background: #000000;
 	opacity: .8; 
 	}
-.jumbotron .jumboTextbox{
-	opacity: none;
-	}
 .nav li{
 	display: inline;
 	padding: 5px;
 }
 .foot p{
 	font-size: small;
-	float: bottom;
 	}
 .top div{
 	display: inline;
@@ -63,14 +65,6 @@ body{
 	color: #ffffff;
 	}
 
-.pull-right{
-	float: right;
-	}
-	
-.pull_left{
-	float: left;
-	}
-	
 .logbox{
 	border-radius: 5px;
 	}
@@ -78,5 +72,9 @@ body{
 .NewU{
     padding: 5px;
     text-decoration: underline, none;
-    color: red;
+}
+
+footer{
+    text-align: center;
+    font-size: 10pt;
 }

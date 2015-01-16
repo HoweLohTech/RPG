@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<link href="bootstrap-3.3.1-dist\dist\css\bootstrap.css" rel="stylesheet"/>
@@ -82,6 +82,11 @@
 		</div>
 		<div class="col-md-1">
 		</div>
+		<div class="col-md-12">
+	    <nav>
+	        <a href="index.php">Home </a> | <a href="DM_page.php"> Dungeon Masters </a> | <a href="Player_Page"> Players </a> | <a href="about.php"> About </a> | <a href="contact.php"> Contact</a>
+	    </nav>
+	    </div>
 	</div>
 </body>
 </html>
