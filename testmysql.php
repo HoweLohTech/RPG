@@ -1,7 +1,9 @@
 <?php 
-$link = mysql_connect('localhost','','','rpg'); 
-if (!$link) { 
-	die('Could not connect to MySQL: ' . mysql_error()); 
+$link = new mysqli('locahost','ghandi','Su7aPh0ne','RPG'); 
+if ($link->connect_error) { 
+	die('Could not connect to MySQL: ' . $link->connect_error); 
 } 
-echo 'Connection OK'; mysql_close($link); 
+echo 'Connection OK'; 
+
+$link->close(); 
 ?> 
