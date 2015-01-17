@@ -12,12 +12,12 @@ $NewUFirst = testFormData($_Post["NewUFirst"]);
 $NewULast = testFormData($_Post["NewULast"]);
 $NewUBirth = testFormData($_Post["NewUBirth"]);
 
-$sql= 'INSERT INTO Users ' .
+if ($insert= $db->query('INSERT INTO Users ' .
     "(id, username, password, firstName, lastName, bDate)" .
-    "Values ('', '$NewUsername', '$NewUPass', '$NewUFirst', '$NewULast', '$NewUBirth')";
+    "Values ('', '$NewUsername', '$NewUPass', '$NewUFirst', '$NewULast', '$NewUBirth')")){
+        
+    };
     
-$insert= mysqli_query($sql);
-
 if (!$insert){
     die ("Erroneous:" . mysql_error());
 }

@@ -6,4 +6,8 @@ $dbDB = 'RPG';
 
 //mysqli_connect takes db host, username, password, and db name to connect to mysql on the server
 $db = new mysqli($dbHost,$dbUser,$dbPass, $dbDB)or die("Error connecting to database.");
+
+if ($db->connect_errno){
+    die("Dude, it didn't work...<br>" . $db->connect_error);
+}
 ?>
