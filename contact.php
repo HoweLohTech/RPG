@@ -13,8 +13,8 @@
 	</header>
 	<div class="body">
 	    <?php
-			$int1 = rand(0,25);
-			$int2 = rand(0,25);
+			$int1 = 2;
+			$int2 = 2;
             $name = $_POST['name'];
             $email = $_POST['email'];
             $message = $_POST['comment'];
@@ -26,7 +26,7 @@
             
 			if ($_POST['submit'] && $human == $int1 + $int2) {				 
                 if (mail ($to, $subject, $body, $from)) { 
-	                echo '<p>'$to . ' ' . $from . ' ' . $message'</p>';
+	                echo '<p>Message Sent!</p>';
 	            } else if ($_POST['submit'] && $human != $int1 + $int2) {
 	                echo '<p>You answered the anti-spam question incorrectly!</p>';
 	            } else { 
