@@ -13,6 +13,8 @@
 	</header>
 	<div class="body">
 	    <?php
+			$int1 = rand(0,25);
+			$int2 = rand(0,25);
             $name = $_POST['name'];
             $email = $_POST['email'];
             $message = $_POST['comment'];
@@ -20,11 +22,12 @@
             $to = "pshowell@howeloh.com";
             $subject = "Comment from Game Site";
             $human = $_POST['human'];
-            $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-            if ($_POST['submit'] && $human == '4') {				 
+            $body = 'From: ' . $name . '\r\n' . 'E-Mail: ' . $email . '\r\n' . 'Message:\n' . $message;
+            
+			if ($_POST['submit'] && $human == $int1 + $int2) {				 
                 if (mail ($to, $subject, $body, $from)) { 
-	                echo '<p>Your message has been sent!</p>';
-	            } else if ($_POST['submit'] && $human != '4') {
+	                echo '<p>'$to . ' ' . $from . ' ' . $message'</p>';
+	            } else if ($_POST['submit'] && $human != $int1 + $int2) {
 	                echo '<p>You answered the anti-spam question incorrectly!</p>';
 	            } else { 
 	                echo '<p>Something went wrong, go back and try again!</p>'; 
@@ -38,7 +41,7 @@
 	        <input name="email" type="email" placeholder="example@domain.com"> <!--email input-->
 	        <label>Comment</label>
 	        <textarea name="comment" placeholder="What is your comment?"></textarea><!--Message pane-->
-	        <label>*What is 2+2? (Anti-spam)</label><!--blocking spam-->
+	        <label>*What is <?php echo $int1 . " + " . $int2?>? (Anti-spam)</label><!--blocking spam-->
             <input name="human" placeholder="Answer">
 	        <input id="submit" name="submit" type="submit" value="Submit"> <!--Submit button-->
 	    </form>
