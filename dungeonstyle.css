@@ -5,6 +5,9 @@ body{
 	margin-top: 10px;
 	margin-bottom: 10px;
 	}
+.nav a{
+    text-decoration: none;
+}
 a{
     color: #000000;
     text-decoration: underline;
@@ -65,16 +68,60 @@ a{
 	color: #ffffff;
 	}
 
-.logbox{
+.logbox {
 	border-radius: 5px;
 	}
 
-.NewU{
+.NewU {
     padding: 5px;
     text-decoration: underline, none;
 }
 
-footer{
+footer {
     text-align: center;
     font-size: 10pt;
+}
+.body form { /*start styling for Contact page contact form*/
+    margin: 0 auto;
+    width: 459px;
+}
+.body label {
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.body {
+    display: block;
+    margin: 0 auto;
+    width: 576px;
+}
+.body input, textarea {
+	width:439px;
+	height:27px;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.body textarea {
+	height:213px;
+	background: #efefef;
+}
+input:focus, textarea:focus { /*adds highlighting around all text entry areas on page*/
+    border:1px solid #97d6eb;
+}
+.body #submit {
+    width:127px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+.body #submit:hover {
+    opacity:.9;
 }

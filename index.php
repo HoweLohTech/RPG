@@ -3,7 +3,7 @@
 <head>
 	<link href="bootstrap-3.3.1-dist\dist\css\bootstrap.css" rel="stylesheet"/>
 	<link href="dungeonstyle.css" rel="stylesheet"/>
-	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="shortcut icon" href="HoweLoh_Logo.png"/>
 	<title>Home Page</title>
 </head>
 <body>

@@ -9,6 +9,47 @@
 	<?php include 'Header.php'?>
 	<h1>Contact Us</h1>
 	<hr>
+	<header class="body">
+	</header>
+	<div class="body">
+	    <?php
+			$int1 = rand(0,25);
+			$int2 = rand(0,25);
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['comment'];
+            $from = "From: Game site";
+            $to = "pshowell@howeloh.com";
+            $subject = "Comment from Game Site";
+            $human = $_POST['human'];
+            $body = 'From: ' . $name . '\r\n' . 'E-Mail: ' . $email . '\r\n' . 'Message:\n' . $message;
+            
+			if ($_POST['submit'] && $human == $int1 + $int2) {				 
+                if (mail ($to, $subject, $body, $from)) { 
+	                echo '<p>'$to . ' ' . $from . ' ' . $message'</p>';
+	            } else if ($_POST['submit'] && $human != $int1 + $int2) {
+	                echo '<p>You answered the anti-spam question incorrectly!</p>';
+	            } else { 
+	                echo '<p>Something went wrong, go back and try again!</p>'; 
+	            }
+            };
+        ?>
+	    <form method="post" action="contact.php"> <!--Contact form-->
+	        <label>Name</label>
+	        <input name="name" placeholder="John Smith"> <!--Name input-->
+	        <label>Email</label>
+	        <input name="email" type="email" placeholder="example@domain.com"> <!--email input-->
+	        <label>Comment</label>
+	        <textarea name="comment" placeholder="What is your comment?"></textarea><!--Message pane-->
+	        <label>*What is <?php echo $int1 . " + " . $int2?>? (Anti-spam)</label><!--blocking spam-->
+            <input name="human" placeholder="Answer">
+	        <input id="submit" name="submit" type="submit" value="Submit"> <!--Submit button-->
+	    </form>
+	    <!--everything seems to work except for when it is time to submit the form. please look over the php. I think that is where the problem is. let me know. This is the tutorial I used to try to create this form (http://tangledindesign.com/how-to-create-a-contact-form-using-html5-css3-and-php/)-->
+	</div>
+	<footer class="body">
+	</footer>
+	<hr>
 	<div class="foot"> <!--Footer for each page-->
 		<div class="col-md-1">
 		</div>
