@@ -18,7 +18,7 @@
 					<a href="contact.php">Contact</a>
 				</li>
 			</ul>
-			<form class="pull-right" action="login.php" method="post">
+		    <form class="pull-right" action="login.php" method="post">
 				Username: <input class="logbox" type="text" name="username">
 				Password: <input class="logbox" type="text" name="password">
 				<input type="submit">
