@@ -22,7 +22,7 @@
             $headers = 'From: e.ed.loh@howeloh.com' . "\r\n" .
 						'Reply-To: e.ed.loh@howeloh.com' . "\r\n" .
 						'X-Mailer: PHP/' . phpversion();
-            $to = "e.ed.loh@howeloh.com";
+            $to = "e.ed.loh@howeloh.com, pshowell@howeloh.com";
             $subject = "Comment from Game Site";
             $human = $_POST['human'];
 			
