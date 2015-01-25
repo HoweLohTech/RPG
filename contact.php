@@ -3,7 +3,7 @@
 <head>
 	<link href="bootstrap-3.3.1-dist\dist\css\bootstrap.css" rel="stylesheet"/>
 	<link href="dungeonstyle.css" rel="stylesheet"/>
-	<title>Home Page</title>
+	<title>Contact Us</title>
 </head>
 <body>
 	<?php include 'Header.php'?>
@@ -13,19 +13,21 @@
 	</header>
 	<div class="body">
 	    <?php
-			$int1 = 2;
-			$int2 = 2;
+			error_reporting(-1);
+			$int1 = 3;
+			$int2 = 3;
             $name = $_POST['name'];
             $email = $_POST['email'];
             $message = $_POST['comment'];
-            $from = "From: Game site";
-            $to = "pshowell@howeloh.com";
+            $headers = 'From: e.ed.loh@howeloh.com' . "\r\n" .
+						'Reply-To: e.ed.loh@howeloh.com' . "\r\n" .
+						'X-Mailer: PHP/' . phpversion();
+            $to = "e.ed.loh@howeloh.com, pshowell@howeloh.com";
             $subject = "Comment from Game Site";
             $human = $_POST['human'];
-            $body = 'From: ' . $name . '\r\n' . 'E-Mail: ' . $email . '\r\n' . 'Message:\n' . $message;
-            
+			
 			if ($_POST['submit'] && $human == $int1 + $int2) {				 
-                if (mail ($to, $subject, $body, $from)) { 
+                if (mail ($to, $subject, $message, $headers)) { 
 	                echo '<p>Message Sent!</p>';
 	            } else if ($_POST['submit'] && $human != $int1 + $int2) {
 	                echo '<p>You answered the anti-spam question incorrectly!</p>';
