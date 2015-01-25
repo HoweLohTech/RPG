@@ -13,18 +13,23 @@
 	</header>
 	<div class="body">
 	    <?php
+			error_reporting(-1);
+			$int1 = 3;
+			$int2 = 3;
             $name = $_POST['name'];
             $email = $_POST['email'];
             $message = $_POST['comment'];
-            $from = "From: Game site";
-            $to = "pshowell@howeloh.com";
+            $headers = 'From: e.ed.loh@howeloh.com' . "\r\n" .
+						'Reply-To: e.ed.loh@howeloh.com' . "\r\n" .
+						'X-Mailer: PHP/' . phpversion();
+            $to = "e.ed.loh@howeloh.com, pshowell@howeloh.com";
             $subject = "Comment from Game Site";
             $human = $_POST['human'];
-            $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-            if ($_POST['submit'] && $human == '4') {				 
-                if (mail ($to, $subject, $body, $from)) { 
-	                echo '<p>Your message has been sent!</p>';
-	            } else if ($_POST['submit'] && $human != '4') {
+			
+			if ($_POST['submit'] && $human == $int1 + $int2) {				 
+                if (mail ($to, $subject, $message, $headers)) { 
+	                echo '<p>Message Sent!</p>';
+	            } else if ($_POST['submit'] && $human != $int1 + $int2) {
 	                echo '<p>You answered the anti-spam question incorrectly!</p>';
 	            } else { 
 	                echo '<p>Something went wrong, go back and try again!</p>'; 
@@ -38,7 +43,7 @@
 	        <input name="email" type="email" placeholder="example@domain.com"> <!--email input-->
 	        <label>Comment</label>
 	        <textarea name="comment" placeholder="What is your comment?"></textarea><!--Message pane-->
-	        <label>*What is 2+2? (Anti-spam)</label><!--blocking spam-->
+	        <label>*What is <?php echo $int1 . " + " . $int2?>? (Anti-spam)</label><!--blocking spam-->
             <input name="human" placeholder="Answer">
 	        <input id="submit" name="submit" type="submit" value="Submit"> <!--Submit button-->
 	    </form>
