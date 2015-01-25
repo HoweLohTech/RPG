@@ -3,7 +3,7 @@
 <head>
 	<link href="bootstrap-3.3.1-dist\dist\css\bootstrap.css" rel="stylesheet"/>
 	<link href="dungeonstyle.css" rel="stylesheet"/>
-	<title>Home Page</title>
+	<title>Contact Us</title>
 </head>
 <body>
 	<?php include 'Header.php'?>
