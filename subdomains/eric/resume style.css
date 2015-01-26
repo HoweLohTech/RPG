@@ -1,0 +1,16 @@
+* {
+	text-align: center;
+}
+
+.selectors li {
+	display:inline-block;
+	border-color: black;
+	background-color: white;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: purple;
+}
