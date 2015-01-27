@@ -1,5 +1,6 @@
 * {
 	text-align: center;
+	font-family: "Times New Roman", Times, serif;
 }
 
 .selectors li {
@@ -10,7 +11,19 @@
 	padding: 10px;
 }
 
-a {
+.selectors a {
 	text-decoration: none;
-	color: purple;
+	color: Black;
+}
+
+#title {
+	float: left;
+	display: block;
+}
+
+#header {
+	position: fixed;
+	width: 650px;
+	background-color: gray;
+	color: black;
 }
