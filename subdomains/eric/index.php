@@ -6,6 +6,6 @@
 
 </head>
 <body>
-<?php include "Header Footer/header.php" ?>
+<?php include "Header Footer/Header.php" ?>
 	<h1> This is a resume!</h1>
 </body>
