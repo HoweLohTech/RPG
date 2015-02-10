@@ -1,29 +1,9 @@
-* {
-	text-align: center;
-	font-family: "Times New Roman", Times, serif;
+.center-align{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
 
-.selectors li {
-	display:inline-block;
-	border-color: black;
-	background-color: white;
-	border-radius: 5px;
-	padding: 10px;
-}
-
-.selectors a {
-	text-decoration: none;
-	color: Black;
-}
-
-#title {
-	float: left;
-	display: block;
-}
-
-#header {
-	position: fixed;
-	width: 650px;
-	background-color: gray;
-	color: black;
+#title{
+    text-decoration: bold;
 }

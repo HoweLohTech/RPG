@@ -1,5 +1,5 @@
 <?php
-echo "<div id='header'>
+echo "<div class='center-align'>
 		<h1 id='title'>Eric Edward Lohmar<br></h1>
 		<div class='selectors'>
 			<ul>
